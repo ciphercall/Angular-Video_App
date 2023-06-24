@@ -27,7 +27,6 @@ mat-card {
 /* Set a fixed height for the mat-card-header and mat-card-content elements */
 mat-card-header,
 mat-card-content {
-  height: 50px;
   overflow: hidden;
 }
 
@@ -36,4 +35,23 @@ mat-card-header,
 mat-card-content {
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+mat-card-title {
+  font-size: 15px;
+  line-height: 1.2;
+  height: calc(15px * 1.2 * 2);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+mat-card-content {
+  font-size: 12px;
+  line-height: 1.2;
+  height: calc(12px * 1.2 * 3);
+}
+mat-card-header {
+  margin-right: 8px;
 }
