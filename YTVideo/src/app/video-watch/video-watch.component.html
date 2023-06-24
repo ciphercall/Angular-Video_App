@@ -3,3 +3,16 @@
   <h1>{{video.title}}</h1>
   <p>{{video.description}}</p>
 </ng-container>
+
+<h2>Suggested Videos</h2>
+<div class="suggested-videos">
+  <mat-card *ngFor="let video of suggestedVideos" [routerLink]="['/watch', video.id]">
+    <mat-card-header>
+      <mat-card-title>{{video.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="video.image" alt="Video thumbnail">
+    <mat-card-content>
+      {{video.description}}
+    </mat-card-content>
+  </mat-card>
+</div>
