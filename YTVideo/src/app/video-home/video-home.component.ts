@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-video-home',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./video-home.component.css']
 })
 export class VideoHomeComponent {
+  videos!: any[];
 
+  constructor(private http: HttpClient) {
+    this.http.get<any>('/assets/videos.json').subscribe(data => {
+      this.videos = data.results;
+    });
+  }
 }

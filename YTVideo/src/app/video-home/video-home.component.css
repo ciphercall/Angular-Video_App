@@ -1,0 +1,39 @@
+/* Add a container element around the mat-card elements */
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -4px; /* Add negative margin to counteract the margin on the mat-card elements */
+}
+
+/* Set the width of each mat-card element to 25% and add a margin */
+mat-card {
+  width: calc(25% - 8px); /* Subtract the margin from the width */
+  margin: 4px;
+}
+
+/* Use media queries to adjust the width of the mat-card elements on smaller screens */
+@media (max-width: 800px) {
+  mat-card {
+    width: calc(50% - 8px);
+  }
+}
+
+@media (max-width: 600px) {
+  mat-card {
+    width: calc(100% - 8px);
+  }
+}
+
+/* Set a fixed height for the mat-card-header and mat-card-content elements */
+mat-card-header,
+mat-card-content {
+  height: 50px;
+  overflow: hidden;
+}
+
+/* Add ellipsis for text that overflows its container */
+mat-card-header,
+mat-card-content {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

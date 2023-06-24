@@ -1,1 +1,11 @@
-<p>video-home works!</p>
+<div class="video-grid">
+  <mat-card *ngFor="let video of videos">
+    <mat-card-header>
+      <mat-card-title>{{video.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="video.image" alt="Video thumbnail">
+    <mat-card-content>
+      {{video.description}}
+    </mat-card-content>
+  </mat-card>
+</div>
