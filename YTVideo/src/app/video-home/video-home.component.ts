@@ -14,4 +14,16 @@ export class VideoHomeComponent {
       this.videos = data.results;
     });
   }
+
+  playPreview(video: any) {
+    // code to play video preview
+    console.log('over me!');
+  }
+
+  stopPreview(video: any) {
+    // code to stop video preview
+    console.log('out of me!');
+
+  }
+
 }

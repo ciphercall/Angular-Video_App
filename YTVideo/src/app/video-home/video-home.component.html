@@ -1,5 +1,5 @@
 <div class="video-grid">
-  <mat-card *ngFor="let video of videos">
+  <mat-card *ngFor="let video of videos" (mouseover)="playPreview(video)" (mouseout)="stopPreview(video)">
     <mat-card-header>
       <mat-card-title>{{video.name}}</mat-card-title>
     </mat-card-header>
