@@ -55,3 +55,10 @@ mat-card-content {
 mat-card-header {
   margin-right: 8px;
 }
+mat-card {
+  transition: transform 0.2s;
+}
+
+mat-card:hover {
+  transform: scale(1.05);
+}
