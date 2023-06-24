@@ -1,0 +1,5 @@
+<ng-container *ngIf="video">
+  <video [src]="video.url" controls></video>
+  <h1>{{video.title}}</h1>
+  <p>{{video.description}}</p>
+</ng-container>

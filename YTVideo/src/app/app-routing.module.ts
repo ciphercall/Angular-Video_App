@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { VideoHomeComponent } from './video-home/video-home.component';
+import { VideoWatchComponent } from './video-watch/video-watch.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,9 @@ const routes: Routes = [
     path: "video-home",
     component: VideoHomeComponent,
     title: "Video Home"
+  },
+  { path: 'watch/:id',
+  component: VideoWatchComponent
   }
 ];
 

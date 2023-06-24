@@ -1,6 +1,6 @@
 <input [(ngModel)]="searchTerm" placeholder="Search videos">
 <div class="video-grid">
-  <mat-card *ngFor="let video of filterVideos(searchTerm)" (mouseover)="playPreview(video)" (mouseout)="stopPreview(video)">
+  <mat-card *ngFor="let video of filterVideos(searchTerm)" (mouseover)="playPreview(video)" (mouseout)="stopPreview(video)" [routerLink]="['/watch', video.id]">
     <mat-card-header>
       <mat-card-title>{{video.name}}</mat-card-title>
     </mat-card-header>

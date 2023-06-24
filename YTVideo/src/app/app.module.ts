@@ -7,11 +7,13 @@ import { VideoHomeComponent } from './video-home/video-home.component';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { VideoWatchComponent } from './video-watch/video-watch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VideoHomeComponent
+    VideoHomeComponent,
+    VideoWatchComponent
   ],
   imports: [
     BrowserModule,
